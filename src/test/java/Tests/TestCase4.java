@@ -1,5 +1,6 @@
 package Tests;
 
+import Pages.*;
 import UtilClass.Methods;
 import org.testng.annotations.Test;
 
@@ -7,22 +8,28 @@ import java.io.IOException;
 
 public class TestCase4 extends Methods {
 
+
     @Test
     public void Test04 () throws InterruptedException, IOException {
 
+
         logger.info("Opening polovni automobili web page");
         Setup();
+
+
         //click posltavi oglas//
         logger.info("Postavi oglas element is present");
         ElementisPresent(oglas);
         logger.info("Click on Postavi oglas element");
         clickonElement(oglas);
 
+
         //click registruj se//
         logger.info("Registruj se element is present");
         ElementisPresent(registracija);
         logger.info("Click on Registruj se element");
         clickonElement(registracija);
+
 
         //fill the boxes//
         logger.info("Get generated email from generate mail method");
@@ -35,6 +42,7 @@ public class TestCase4 extends Methods {
         type(sifra1,Password);
         logger.info("Write same password in to the ponovi lozinku text field element");
         type(sifra2,Password);
+
 
         //check the comboboxes//
         logger.info("Prihvatam check box element is present");
@@ -50,21 +58,25 @@ public class TestCase4 extends Methods {
         logger.info("Click on kupujem check box element");
         clickonElement(kupovinacheckbox);
 
+
         //click registruj se//
         logger.info("Registruj se button element is present");
         ElementisPresent(regbutton);
         logger.info("Click on registruj se button");
         clickonElement(regbutton);
 
+
         //validate that the "hvala na registraciji" message is present//
         Thread.sleep(3000);
         logger.info("Hvala na registraciji message is present");
         ElementisPresent(poruka);
 
+
         //open new tab for protonmail//
         logger.info("new tab opens and proton mail is opened");
         ProtonSetup();
         Thread.sleep(3000);
+
 
         //login proces//
         logger.info("Email text field element is present");
@@ -84,11 +96,13 @@ public class TestCase4 extends Methods {
         logger.info("Write in the proton password in to the proton password text box field element");
         type(protonpass,ProtonPass);
 
+
         //click login button//
         logger.info("Login button element is present");
         ElementisPresent(login);
         logger.info("Click on Login button element");
         clickonElement(login);
+
 
         //open the activation email//
         Thread.sleep(10000);
@@ -104,18 +118,17 @@ public class TestCase4 extends Methods {
         logger.info("Scroll down");
         scrolldown();
         Thread.sleep(3000);
-
         ClickOnLink();
-
-
         logger.info("Pop up element is present");
         ElementisPresent(clickonit);
         logger.info("Click on pop up element");
         clickonElement(clickonit);
 
+
         logger.info("Driver switches pages");
         switchpages();
         Thread.sleep(3000);
+
 
         //click on elements//
         logger.info("Zainteresovan za kupovinu check box element is present");
@@ -131,11 +144,13 @@ public class TestCase4 extends Methods {
         logger.info("Click on zainteresovan za recenziju check box element");
         clickonElement(interestedinreviweing);
 
+
         //click button potvrdi//
         logger.info("Potvrdi button element is present");
         ElementisPresent(potvrdi);
         logger.info("Click on Potvrdi button element");
         clickonElement(potvrdi);
+
 
         //click pop up 2//
         logger.info("Pop up message element is present");
@@ -143,9 +158,8 @@ public class TestCase4 extends Methods {
         logger.info("Click on pop up message element");
         clickonElement(popup2);
 
-        Thread.sleep(6000);
-        //clickonElement(popupfromhell);
 
+        Thread.sleep(6000);
         //type needed information//
         logger.info("Ime text field is present");
         ElementisPresent(name);
@@ -178,11 +192,13 @@ public class TestCase4 extends Methods {
         logger.info("Click on element Sumadijski");
         clickonElement(Sumadijski);
 
+
         //scroll to sacuvaj and click it//
         logger.info("Scroll down until save button element is in view");
         ScrollIntoView(savebutton);
         logger.info("Click on save button element");
         clickonElement(savebutton);
+
 
         //check message//
         logger.info("Scroll up until the postavi oglas element is in view");
@@ -191,13 +207,17 @@ public class TestCase4 extends Methods {
         logger.info("Success message element is present");
         ElementisPresent(succesmesage);
 
+
         //logout//
         logger.info("Hover over Moj profil drop down menu element");
         Hover(dropdownmenu);
         logger.info("Click on izloguj se element");
         clickonElement(logbutton);
+
+
         logger.info("Click on uloguj se element");
         clickonElement(loginagain);
+
 
         //login//
         logger.info("Write in the generated email in to the mail text field element");
@@ -211,15 +231,19 @@ public class TestCase4 extends Methods {
         logger.info("Click on Prijavi se button element");
         clickonElement(regbutton);
 
+
         //verify that it is correct account//
         logger.info("Account is correct");
         ElementisPresent(message);
+
 
         //open mail//
         logger.info("Open proton mail page");
         Protonmail();
 
+
         clickonElement(mailentrance);
+
 
         //delete email//
         logger.info("Click on email element");

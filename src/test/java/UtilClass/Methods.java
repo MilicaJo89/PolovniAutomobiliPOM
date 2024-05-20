@@ -19,6 +19,7 @@ import java.util.logging.Logger;
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 
+
 public class Methods extends Paths {
 
     WebDriverWait wait;
@@ -27,6 +28,8 @@ public class Methods extends Paths {
 
 
     public static final Logger logger = Logger.getLogger("MyLogger");
+
+    String generatedEmail= generateemail();
 
 
     public static String generateemail() {
@@ -119,28 +122,5 @@ public class Methods extends Paths {
         WebElement element = driver.findElement(By.partialLinkText("https://www.polovniautomobili.com/aktivacija-naloga?user=2"));
         element.click();
         driver.switchTo().defaultContent();
-
     }
-
-   //one koje sam pravila
-
-    public  void HomePageLoad(){
-        Setup();
-    }
-
-    public void HomePageElementOglasIsPresent(){
-        ElementisPresent(oglas);
-    }
-
-    public void HomePageClickOnElementOglas(){
-        clickonElement(oglas);
-    }
-
-
-
-
-
-
-
-
 }

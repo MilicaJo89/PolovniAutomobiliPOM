@@ -1,0 +1,62 @@
+package Pages;
+
+import UtilClass.Methods;
+import org.openqa.selenium.By;
+
+import java.io.IOException;
+
+
+public class PAUserProfilePage extends Methods {
+
+    //paths
+    public By name = By.xpath("//input[@name='first_name']");
+    public By lastnames = By.xpath("//input[@name='last_name']");
+    public By Address = By.xpath("//input[@name='address']");
+    public By City = By.xpath("//input[@name='city']");
+    public By Zipcode = By.xpath("//input[@name='zip_code']");
+    public By Cellphone = By.xpath("//input[@id='cellphone']");
+    public By okrug = By.xpath("//p[@title=' Odaberite okrug']");
+    public By Sumadijski = By.xpath("//label[contains(.,'Šumadijski')]");
+    public By savebutton = By.xpath("//button[@id='submit']");
+    public By succesmesage = By.xpath("//div[@class='uk-alert uk-alert-success']");
+    public By postavioglas = By.xpath("//a[@class='top-menu-submit-classified js_ga-event']");
+    public By dropdownmenu = By.xpath("//i[@class='position-absolute uk-icon-caret-down']");
+    public By logbutton = By.xpath("//li//a[@class='js-logout-link signin_menu_element']");
+
+
+
+    public void enterUserInformation() throws IOException {
+        ElementisPresent(name);
+        String Name = GetFromProperties("firsname");
+        type(name, Name);
+        String LastName = GetFromProperties("lastname");
+        type(lastnames,LastName);
+        String address1 = GetFromProperties("address");
+        type(Address, address1 );
+        String city1 = GetFromProperties("city");
+        type(City, city1);
+        String zip1 = GetFromProperties("zipcode");
+        type(Zipcode, zip1);
+        String Cellphone1 = GetFromProperties("cellphone");
+        type(Cellphone, Cellphone1);
+        clickonElement(okrug);
+        clickonElement(Sumadijski);
+    }
+
+    public void saveButton(){
+        ScrollIntoView(savebutton);
+        clickonElement(savebutton);
+    }
+
+    public void verifySuccessMessage() throws InterruptedException {
+        ScrollIntoView(postavioglas);
+        Thread.sleep(3000);
+        ElementisPresent(succesmesage);
+    }
+
+    public void logOutButton(){
+        Hover(dropdownmenu);
+        clickonElement(logbutton);
+    }
+
+}
