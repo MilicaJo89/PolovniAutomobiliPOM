@@ -17,7 +17,7 @@ public class TestCase4 extends Methods {
         Setup();
         //click posltavi oglas//
         logger.info("Postavi oglas element is present");
-        ElementisPresent(oglas);
+        elementsPresent(oglas);
         logger.info("Click on Postavi oglas element");
         clickonElement(oglas);
 
@@ -27,7 +27,7 @@ public class TestCase4 extends Methods {
 
         //click registruj se//
         logger.info("Registruj se element is present");
-        ElementisPresent(registracija);
+        elementsPresent(registracija);
         logger.info("Click on Registruj se element");
         clickonElement(registracija);
 
@@ -47,22 +47,22 @@ public class TestCase4 extends Methods {
 
         //check the comboboxes//
         logger.info("Prihvatam check box element is present");
-        ElementisPresent(prihvatamcheckbox);
+        elementsPresent(prihvatamcheckbox);
         logger.info("Click on prihvatam check box element");
         clickonElement(prihvatamcheckbox);
         logger.info("Prodajem check box element is present ");
-        ElementisPresent(prodajacheckbox);
+        elementsPresent(prodajacheckbox);
         logger.info("Click on prodajem check box element");
         clickonElement(prodajacheckbox);
         logger.info("Kupijuem check box element is present");
-        ElementisPresent(kupovinacheckbox);
+        elementsPresent(kupovinacheckbox);
         logger.info("Click on kupujem check box element");
         clickonElement(kupovinacheckbox);
 
 
         //click registruj se//
         logger.info("Registruj se button element is present");
-        ElementisPresent(regbutton);
+        elementsPresent(regbutton);
         logger.info("Click on registruj se button");
         clickonElement(regbutton);
 
@@ -70,7 +70,7 @@ public class TestCase4 extends Methods {
         //validate that the "hvala na registraciji" message is present//
         Thread.sleep(3000);
         logger.info("Hvala na registraciji message is present");
-        ElementisPresent(poruka);
+        elementsPresent(poruka);
 
 
         //open new tab for protonmail//
@@ -81,7 +81,7 @@ public class TestCase4 extends Methods {
 
         //login proces//
         logger.info("Email text field element is present");
-        ElementisPresent(protonmail);
+        elementsPresent(protonmail);
         logger.info("Click on email text field element");
         clickonElement(protonmail);
         logger.info("Get proton email from properties file");
@@ -89,7 +89,7 @@ public class TestCase4 extends Methods {
         logger.info("Write in the proton email in to the proton email text field element");
         type(protonmail,ProtonMail);
         logger.info("Password text field element is present");
-        ElementisPresent(protonpass);
+        elementsPresent(protonpass);
         logger.info("Click on password text field element");
         clickonElement(protonpass);
         logger.info("Get proton password from properties file");
@@ -100,7 +100,7 @@ public class TestCase4 extends Methods {
 
         //click login button//
         logger.info("Login button element is present");
-        ElementisPresent(login);
+        elementsPresent(login);
         logger.info("Click on Login button element");
         clickonElement(login);
 
@@ -108,11 +108,11 @@ public class TestCase4 extends Methods {
         //open the activation email//
         Thread.sleep(10000);
         logger.info("Click on Proton mail element");
-        ElementisPresent(mailentrance);
+        elementsPresent(mailentrance);
         clickonElement(mailentrance);
         Thread.sleep(10000);
         logger.info("Email title element is present");
-        ElementisPresent(emailtitle);
+        elementsPresent(emailtitle);
         logger.info("Click on email title element");
         clickonElement(emailtitle);
         Thread.sleep(3000);
@@ -121,7 +121,7 @@ public class TestCase4 extends Methods {
         Thread.sleep(3000);
         ClickOnLink();
         logger.info("Pop up element is present");
-        ElementisPresent(clickonit);
+        elementsPresent(clickonit);
         logger.info("Click on pop up element");
         clickonElement(clickonit);
 
@@ -133,29 +133,29 @@ public class TestCase4 extends Methods {
 
         //click on elements//
         logger.info("Zainteresovan za kupovinu check box element is present");
-        ElementisPresent(interestedinbuying);
+        elementsPresent(interestedinbuying);
         logger.info("Click on zainteresovan za kupovinu check box element");
         clickonElement(interestedinbuying);
         logger.info("Zainteresovan za prodaju check box element is present");
-        ElementisPresent(interestedinselling);
+        elementsPresent(interestedinselling);
         logger.info("Click on zainteresovan za prodaju check box element");
         clickonElement(interestedinselling);
         logger.info("Zainteresovan za recenziju check box element is present");
-        ElementisPresent(interestedinreviweing);
+        elementsPresent(interestedinreviweing);
         logger.info("Click on zainteresovan za recenziju check box element");
         clickonElement(interestedinreviweing);
 
 
         //click button potvrdi//
         logger.info("Potvrdi button element is present");
-        ElementisPresent(potvrdi);
+        elementsPresent(potvrdi);
         logger.info("Click on Potvrdi button element");
         clickonElement(potvrdi);
 
 
         //click pop up 2//
         logger.info("Pop up message element is present");
-        ElementisPresent(popup2);
+        elementsPresent(popup2);
         logger.info("Click on pop up message element");
         clickonElement(popup2);
 
@@ -163,7 +163,7 @@ public class TestCase4 extends Methods {
         Thread.sleep(6000);
         //type needed information//
         logger.info("Ime text field is present");
-        ElementisPresent(name);
+        elementsPresent(name);
         logger.info("Get first name from properties file");
         String Name = GetFromProperties("firsname");
         logger.info("Write in the name in to the ime text field element");
@@ -206,12 +206,12 @@ public class TestCase4 extends Methods {
         ScrollIntoView(postavioglas);
         Thread.sleep(3000);
         logger.info("Success message element is present");
-        ElementisPresent(succesmesage);
+        elementsPresent(succesmesage);
 
 
         //logout//
         logger.info("Hover over Moj profil drop down menu element");
-        Hover(dropdownmenu);
+        hover(dropdownmenu);
         logger.info("Click on izloguj se element");
         clickonElement(logbutton);
 
@@ -228,14 +228,15 @@ public class TestCase4 extends Methods {
         logger.info("Write in password in lozinka text field element");
         type(sifra3,ProtonPass);
         logger.info("Prijavi se button element is present");
-        ElementisPresent(regbutton);
+        elementsPresent(regbutton);
         logger.info("Click on Prijavi se button element");
         clickonElement(regbutton);
 
 
         //verify that it is correct account//
+        Thread.sleep(5000);
         logger.info("Account is correct");
-        ElementisPresent(message);
+        elementsPresent(message);
 
 
         //open mail//

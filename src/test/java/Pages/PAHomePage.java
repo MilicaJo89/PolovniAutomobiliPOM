@@ -19,8 +19,9 @@ public class PAHomePage extends Methods {
     public By message = By.xpath("//span[@class='ym-hide-content']");
 
 
-
-
+    public PAHomePage(WebDriver driver) {
+        this.driver = driver;
+    }
 
     public void homePageSetUp(){
         System.setProperty("webdriver.geckodriver", "\"C:\\Users\\milicaj\\Downloads\\geckodriver.exe\"");
@@ -35,7 +36,7 @@ public class PAHomePage extends Methods {
         driver.findElement(oglas).click();
     }
     public void ClickOnPostaviOglasButton(){
-        ElementisPresent(oglas);
+        elementsPresent(oglas);
         clickonElement(oglas);
     }
 
@@ -44,7 +45,7 @@ public class PAHomePage extends Methods {
     }
 
     public void validateAccountIsCorrect(){
-        clickonElement(message);
+        elementsPresent(message);
     }
 
 

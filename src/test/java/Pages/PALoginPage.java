@@ -9,8 +9,8 @@ import java.io.IOException;
 
 public class PALoginPage extends Methods {
 
-    WebDriver driver;
 
+    WebDriver driver;
 
 
     //paths
@@ -20,25 +20,16 @@ public class PALoginPage extends Methods {
     public By regbutton = By.xpath("//button[@name='login']");
 
 
-    public void clickRegistrujSeButton() throws InterruptedException {
-        ElementisPresent(registracija);
-        clickonElement(registracija);
+    public PALoginPage(WebDriver driver) {
+        this.driver = driver;
     }
 
-    public void loginAgain() throws IOException {
-        String generatedEmail=generateemail();
-        String ProtonPass=GetFromProperties("password2");
-        logger.info("Write in the generated email in to the mail text field element");
-        type(Username, generatedEmail);
-        logger.info("Click on sledece button element");
-        clickonElement(nextstep);
-        logger.info("Write in password in lozinka text field element");
-        type(sifra3,ProtonPass);
-        logger.info("Prijavi se button element is present");
-        ElementisPresent(regbutton);
-        logger.info("Click on Prijavi se button element");
-        clickonElement(regbutton);
+    public void clickRegistrujSeButton() {
+       elementsPresent(registracija);
+       clickonElement(registracija);
     }
+
+
 
 
 

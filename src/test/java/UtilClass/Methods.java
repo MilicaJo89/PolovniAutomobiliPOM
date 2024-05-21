@@ -22,8 +22,11 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 
 public class Methods extends Paths {
 
-    WebDriverWait wait;
-    WebDriver driver;
+    public static WebDriverWait wait;
+
+    public static WebDriver driver;
+
+
     String FilePath = "C:\\Users\\milicaj\\IdeaProjects\\PolovniAutomobiliPOM\\src\\test\\java\\UtilClass\\Data.properties";
 
 
@@ -41,7 +44,7 @@ public class Methods extends Paths {
         return s;
     }
 
-    public void Hover(By xpath) {
+    public void hover(By xpath) {
         WebElement hoverable = driver.findElement(xpath);
         new Actions(driver).moveToElement(hoverable).perform();
     }
@@ -61,7 +64,7 @@ public class Methods extends Paths {
         }
     }
 
-    public void ElementisPresent(By xpath) {
+    public void elementsPresent(By xpath) {
         wait.until(visibilityOf(driver.findElement(xpath))).isDisplayed();
     }
 
@@ -75,12 +78,13 @@ public class Methods extends Paths {
         driver.switchTo().window(tab.get(2));
     }
 
-    public void Setup() {
+    public WebDriver Setup() {
         System.setProperty("webdriver.geckodriver", "\"C:\\Users\\milicaj\\Downloads\\geckodriver.exe\"");
         driver = new FirefoxDriver();
         driver.get("https://www.polovniautomobili.com");
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofMillis(30000));
+        return driver;
     }
 
     public void ProtonSetup() {

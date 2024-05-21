@@ -2,6 +2,7 @@ package Pages;
 
 import UtilClass.Methods;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 
 public class PABravoPage extends Methods {
@@ -13,22 +14,26 @@ public class PABravoPage extends Methods {
     public By potvrdi = By.xpath("//button[@name='submit_registration_survey']");
     public By popup2 = By.xpath("//button[contains(text(),'U redu')]");
 
+    WebDriver driver;
 
+    public PABravoPage(WebDriver driver) {
+        this.driver = driver;
+    }
 
     public void checkCheckBoxes(){
         switchpages();
-        ElementisPresent(interestedinbuying);
+        elementsPresent(interestedinbuying);
         clickonElement(interestedinbuying);
-        ElementisPresent(interestedinselling);
+        elementsPresent(interestedinselling);
         clickonElement(interestedinselling);
-        ElementisPresent(interestedinreviweing);
+        elementsPresent(interestedinreviweing);
         clickonElement(interestedinreviweing);
     }
 
     public void clickPotvrdiButton(){
-        ElementisPresent(potvrdi);
+        elementsPresent(potvrdi);
         clickonElement(potvrdi);
-        ElementisPresent(popup2);
+        elementsPresent(popup2);
         clickonElement(popup2);
     }
 

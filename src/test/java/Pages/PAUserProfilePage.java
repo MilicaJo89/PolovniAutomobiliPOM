@@ -2,11 +2,14 @@ package Pages;
 
 import UtilClass.Methods;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 import java.io.IOException;
 
 
 public class PAUserProfilePage extends Methods {
+
+    WebDriver driver;
 
     //paths
     public By name = By.xpath("//input[@name='first_name']");
@@ -23,10 +26,12 @@ public class PAUserProfilePage extends Methods {
     public By dropdownmenu = By.xpath("//i[@class='position-absolute uk-icon-caret-down']");
     public By logbutton = By.xpath("//li//a[@class='js-logout-link signin_menu_element']");
 
-
+    public PAUserProfilePage(WebDriver driver) {
+        this.driver = driver;
+    }
 
     public void enterUserInformation() throws IOException {
-        ElementisPresent(name);
+        elementsPresent(name);
         String Name = GetFromProperties("firsname");
         type(name, Name);
         String LastName = GetFromProperties("lastname");
@@ -51,11 +56,11 @@ public class PAUserProfilePage extends Methods {
     public void verifySuccessMessage() throws InterruptedException {
         ScrollIntoView(postavioglas);
         Thread.sleep(3000);
-        ElementisPresent(succesmesage);
+        elementsPresent(succesmesage);
     }
 
     public void logOutButton(){
-        Hover(dropdownmenu);
+        hover(dropdownmenu);
         clickonElement(logbutton);
     }
 
