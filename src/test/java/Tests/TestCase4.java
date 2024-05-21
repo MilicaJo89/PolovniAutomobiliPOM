@@ -1,6 +1,6 @@
 package Tests;
 
-import Pages.*;
+
 import UtilClass.Methods;
 import org.testng.annotations.Test;
 
@@ -15,13 +15,14 @@ public class TestCase4 extends Methods {
 
         logger.info("Opening polovni automobili web page");
         Setup();
-
-
         //click posltavi oglas//
         logger.info("Postavi oglas element is present");
         ElementisPresent(oglas);
         logger.info("Click on Postavi oglas element");
         clickonElement(oglas);
+
+
+
 
 
         //click registruj se//

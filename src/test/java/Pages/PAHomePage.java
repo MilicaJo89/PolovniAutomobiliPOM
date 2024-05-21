@@ -20,6 +20,8 @@ public class PAHomePage extends Methods {
 
 
 
+
+
     public void homePageSetUp(){
         System.setProperty("webdriver.geckodriver", "\"C:\\Users\\milicaj\\Downloads\\geckodriver.exe\"");
         driver = new FirefoxDriver();
@@ -44,6 +46,8 @@ public class PAHomePage extends Methods {
     public void validateAccountIsCorrect(){
         clickonElement(message);
     }
+
+
 
 
 

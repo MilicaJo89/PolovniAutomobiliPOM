@@ -1,11 +1,14 @@
 package Tests;
 
+
 import Pages.PAHomePage;
 import Pages.PALoginPage;
 import org.testng.annotations.Test;
 
 
 public class Test4POMVersion {
+
+
 
 
     @Test
@@ -17,6 +20,7 @@ public class Test4POMVersion {
         homePage.homePageSetUp();
         homePage.clickPostaviOglasButton();
 
+        Thread.sleep(3000);
         loginPage.clickRegistrujSeButton();
 
 
