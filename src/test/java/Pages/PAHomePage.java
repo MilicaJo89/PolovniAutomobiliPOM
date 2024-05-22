@@ -22,15 +22,19 @@ public class PAHomePage extends Methods {
 
 
     public void clickOnPostaviOglasButton(){
+        logger.info("postavi oglas button is present");
         elementsPresent(oglas);
+        logger.info("click on postavi oglas button");
         clickonElement(oglas);
     }
 
     public void clickOnLoginButton(){
+        logger.info("click on login button");
         clickonElement(loginagain);
     }
 
     public void validateAccountIsCorrect(){
+        logger.info("validate that the account is correct");
         elementsPresent(message);
     }
 

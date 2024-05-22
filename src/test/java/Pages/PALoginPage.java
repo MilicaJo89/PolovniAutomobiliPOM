@@ -20,8 +20,10 @@ public class PALoginPage extends Methods {
     }
 
     public void clickRegistrujSeButton() {
-       elementsPresent(registracija);
-       clickonElement(registracija);
+        logger.info("registracija button is present");
+        elementsPresent(registracija);
+        logger.info("click on the registracija button");
+        clickonElement(registracija);
     }
 
 }

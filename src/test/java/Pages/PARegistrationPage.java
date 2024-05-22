@@ -34,32 +34,51 @@ public class PARegistrationPage extends Methods {
     }
 
     public void register() throws IOException {
+        logger.info("email is generated");
         generatedEmail = generateemail();
+        logger.info("in the email text box write the generated email value");
         type(mail,generatedEmail);
+        logger.info("from the properties file get password value");
         String Password = getFromProperties("password2");
+        logger.info("in the password text box write password value");
         type(sifra1,Password);
+        logger.info("in the repeated password text box write password value");
         type(sifra2,Password);
     }
 
     public void checkCheckBoxes(){
+        logger.info("prihvatam check box is present");
         elementsPresent(prihvatamcheckbox);
+        logger.info("check the prihvatam check box");
         clickonElement(prihvatamcheckbox);
+        logger.info("prodaja check box is present");
         elementsPresent(prodajacheckbox);
+        logger.info("check the prodaja check box");
         clickonElement(prodajacheckbox);
+        logger.info("kupovina check box is present");
         elementsPresent(kupovinacheckbox);
+        logger.info("check the kupovina check box");
         clickonElement(kupovinacheckbox);
     }
 
     public void clickRegistracijaButton(){
+        logger.info("registracija button is present");
         elementsPresent(regbutton);
+        logger.info("click on registacija button");
         clickonElement(regbutton);
     }
     public void loginAgain() throws IOException {
+        logger.info("in the username text box write the generated email value ");
         type(Username, generatedEmail);
+        logger.info("click on the next step element");
         clickonElement(nextstep);
+        logger.info("from properties file get the value of proton pasword");
         String ProtonPass= getFromProperties("password2");
+        logger.info("in the password text box write the password value");
         type(sifra3,ProtonPass);
+        logger.info("login button element is present");
         elementsPresent(regbutton);
+        logger.info("click on login button");
         clickonElement(regbutton);
     }
 

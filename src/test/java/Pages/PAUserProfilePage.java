@@ -34,36 +34,57 @@ public class PAUserProfilePage extends Methods {
     }
 
     public void enterUserInformation() throws IOException {
+        logger.info("text box name is present");
         elementsPresent(name);
+        logger.info("from properties file take value of first name");
         String Name = getFromProperties("firsname");
+        logger.info("in name text box write in the first name value");
         type(name, Name);
+        logger.info("from properties file take the value of last name");
         String LastName = getFromProperties("lastname");
+        logger.info("in the last name text box write value of last name");
         type(lastnames,LastName);
+        logger.info("from properties file take value of address");
         String address1 = getFromProperties("address");
+        logger.info("in the address text box write address value ");
         type(Address, address1 );
+        logger.info("from properties file take value of city");
         String city1 = getFromProperties("city");
+        logger.info("in the city text box write city value");
         type(City, city1);
+        logger.info("from properties file take value of zipcode");
         String zip1 = getFromProperties("zipcode");
+        logger.info("in the zipcode text box write zipcode value");
         type(Zipcode, zip1);
+        logger.info("from properties file take cellphone value");
         String Cellphone1 = getFromProperties("cellphone");
+        logger.info("in the cellphone text box write cellphone value");
         type(Cellphone, Cellphone1);
+        logger.info("click on okrug element");
         clickonElement(okrug);
+        logger.info("click on sumadijski element");
         clickonElement(Sumadijski);
     }
 
     public void saveButton(){
+        logger.info("scroll down to the save button");
         scrollIntoView(savebutton);
+        logger.info("click on the save button");
         clickonElement(savebutton);
     }
 
     public void verifySuccessMessage() throws InterruptedException {
+        logger.info("scroll up to the message");
         scrollIntoView(postavioglas);
         Thread.sleep(3000);
+        logger.info("verify success message");
         elementsPresent(succesmesage);
     }
 
     public void logOutButton(){
+        logger.info("hover over dropdown menu to open it");
         hover(dropdownmenu);
+        logger.info("Click on log out button");
         clickonElement(logbutton);
     }
 

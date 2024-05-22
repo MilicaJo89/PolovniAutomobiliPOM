@@ -31,12 +31,15 @@ public class PAProtonEmailPage extends Methods {
 
     public void openUnreadEmail() throws InterruptedException {
         Thread.sleep(10000);
+        logger.info("email is present");
         elementsPresent(emailtitle);
+        logger.info("click on email");
         clickonElement(emailtitle);
     }
 
 
     public WebDriver scrollDown(WebDriver driver){
+        logger.info("scroll dow to the link");
         Actions actions = new Actions(driver);
         actions.sendKeys(Keys.PAGE_DOWN).click().perform();
         return driver;
@@ -45,35 +48,53 @@ public class PAProtonEmailPage extends Methods {
 
     public WebDriver openActivationLink(WebDriver driver){
         driver.switchTo().frame(1);
+        logger.info("activation link is present");
         elementsPresent(partialLinkText);
+        logger.info("click on activation link");
         clickonElement(partialLinkText);
         driver.switchTo().defaultContent();
+        logger.info("pop up is present");
         elementsPresent(clickonit);
+        logger.info("click on pop up");
         clickonElement(clickonit);
         return driver;
     }
     public void protonmail() {
+        logger.info("open proton mail login page");
         driver.navigate().to("https://account.proton.me/login");
     }
 
     public WebDriver openMailAndDeleteIt(WebDriver driver) {
         driver.navigate().to("https://account.proton.me/login");
+        logger.info("click on mail element");
         clickonElement(mailentrance);
+        logger.info("click on email");
         clickonElement(email2);
+        logger.info("click on trash can element");
         clickonElement(trashcan);
         return driver;
     }
 
     public WebDriver permanentlyDeleteIt(WebDriver driver){
+        logger.info("folder button is present");
         elementsPresent(folderButton);
+        logger.info("click on the folder button");
         clickonElement(folderButton);
+        logger.info("trash button is present");
         elementsPresent(trashButton);
+        logger.info("click on trash button");
         clickonElement(trashButton);
+        logger.info("check cox in front of email is present");
         elementsPresent(checkMark);
+        logger.info("click on check box in front of email");
         clickonElement(checkMark);
+        logger.info("permanent delete button is present");
         elementsPresent(permanentDelete);
+        logger.info("click on permanent button");
         clickonElement(permanentDelete);
+        logger.info("delete button is present");
         elementsPresent(deleteButton);
+        logger.info("click on delete button");
         clickonElement(deleteButton);
         return driver;
     }
