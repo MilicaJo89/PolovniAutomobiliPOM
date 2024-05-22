@@ -3,10 +3,7 @@ package Pages;
 import UtilClass.Methods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class PAHomePage extends Methods {
 
@@ -24,7 +21,7 @@ public class PAHomePage extends Methods {
     }
 
 
-    public void ClickOnPostaviOglasButton(){
+    public void clickOnPostaviOglasButton(){
         elementsPresent(oglas);
         clickonElement(oglas);
     }

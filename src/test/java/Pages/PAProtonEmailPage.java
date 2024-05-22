@@ -4,7 +4,6 @@ import UtilClass.Methods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 
@@ -53,7 +52,7 @@ public class PAProtonEmailPage extends Methods {
         clickonElement(clickonit);
         return driver;
     }
-    public void Protonmail() {
+    public void protonmail() {
         driver.navigate().to("https://account.proton.me/login");
     }
 
@@ -65,7 +64,7 @@ public class PAProtonEmailPage extends Methods {
         return driver;
     }
 
-    public WebDriver PermanentlyDeleteIt(WebDriver driver){
+    public WebDriver permanentlyDeleteIt(WebDriver driver){
         elementsPresent(folderButton);
         clickonElement(folderButton);
         elementsPresent(trashButton);

@@ -36,7 +36,7 @@ public class PARegistrationPage extends Methods {
     public void register() throws IOException {
         generatedEmail = generateemail();
         type(mail,generatedEmail);
-        String Password = GetFromProperties("password2");
+        String Password = getFromProperties("password2");
         type(sifra1,Password);
         type(sifra2,Password);
     }
@@ -57,7 +57,7 @@ public class PARegistrationPage extends Methods {
     public void loginAgain() throws IOException {
         type(Username, generatedEmail);
         clickonElement(nextstep);
-        String ProtonPass=GetFromProperties("password2");
+        String ProtonPass= getFromProperties("password2");
         type(sifra3,ProtonPass);
         elementsPresent(regbutton);
         clickonElement(regbutton);

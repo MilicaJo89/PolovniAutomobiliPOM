@@ -35,29 +35,29 @@ public class PAUserProfilePage extends Methods {
 
     public void enterUserInformation() throws IOException {
         elementsPresent(name);
-        String Name = GetFromProperties("firsname");
+        String Name = getFromProperties("firsname");
         type(name, Name);
-        String LastName = GetFromProperties("lastname");
+        String LastName = getFromProperties("lastname");
         type(lastnames,LastName);
-        String address1 = GetFromProperties("address");
+        String address1 = getFromProperties("address");
         type(Address, address1 );
-        String city1 = GetFromProperties("city");
+        String city1 = getFromProperties("city");
         type(City, city1);
-        String zip1 = GetFromProperties("zipcode");
+        String zip1 = getFromProperties("zipcode");
         type(Zipcode, zip1);
-        String Cellphone1 = GetFromProperties("cellphone");
+        String Cellphone1 = getFromProperties("cellphone");
         type(Cellphone, Cellphone1);
         clickonElement(okrug);
         clickonElement(Sumadijski);
     }
 
     public void saveButton(){
-        ScrollIntoView(savebutton);
+        scrollIntoView(savebutton);
         clickonElement(savebutton);
     }
 
     public void verifySuccessMessage() throws InterruptedException {
-        ScrollIntoView(postavioglas);
+        scrollIntoView(postavioglas);
         Thread.sleep(3000);
         elementsPresent(succesmesage);
     }

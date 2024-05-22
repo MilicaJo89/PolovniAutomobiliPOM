@@ -74,7 +74,7 @@ public class Methods{
         driver.switchTo().window(tab.get(2));
     }
 
-    public WebDriver Setup() {
+    public WebDriver setup() {
         System.setProperty("webdriver.geckodriver", "\"C:\\Users\\milicaj\\Downloads\\geckodriver.exe\"");
         driver = new FirefoxDriver();
         driver.get("https://www.polovniautomobili.com");
@@ -84,18 +84,18 @@ public class Methods{
     }
 
 
-    public void Protonmail() {
+    public void protonmail() {
         driver.navigate().to("https://account.proton.me/login");
     }
 
 
-    public void ScrollIntoView(By xpath) {
+    public void scrollIntoView(By xpath) {
         WebElement element = driver.findElement(xpath);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
 
-    public String GetFromProperties(String property) throws IOException {
+    public String getFromProperties(String property) throws IOException {
         Properties prop = new Properties();
         FileInputStream ip = new FileInputStream(FilePath);
         prop.load(ip);
@@ -106,7 +106,7 @@ public class Methods{
     }
 
     @AfterMethod
-    public void FailTakeScreenshot(ITestResult result) throws IOException {
+    public void failTakeScreenshot(ITestResult result) throws IOException {
         if (ITestResult.FAILURE == result.getStatus()) {
             File screenshotfile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(screenshotfile, new File("C:\\Users\\milicaj\\Pictures\\Screenshots\\Failtest.png"));

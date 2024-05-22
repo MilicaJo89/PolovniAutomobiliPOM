@@ -8,11 +8,12 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 
-public class Test4POMVersion extends Methods {
+public class PomVersion extends Methods {
 
 
     @Test
     public void VersionOfTest04() throws IOException, InterruptedException {
+
         PAHomePage homePage = new PAHomePage(Methods.driver);
         PALoginPage loginPage = new PALoginPage(Methods.driver);
         PABravoPage bravoPage = new PABravoPage(Methods.driver);
@@ -22,8 +23,8 @@ public class Test4POMVersion extends Methods {
         PARegistrationPage registrationPage = new PARegistrationPage(Methods.driver);
         PAUserProfilePage userProfilePage = new PAUserProfilePage(Methods.driver);
 
-        homePage.Setup();
-        homePage.ClickOnPostaviOglasButton();
+        homePage.setup();
+        homePage.clickOnPostaviOglasButton();
         loginPage.clickRegistrujSeButton();
         registrationPage.register();
         registrationPage.checkCheckBoxes();
@@ -53,6 +54,6 @@ public class Test4POMVersion extends Methods {
         registrationPage.loginAgain();
         homePage.validateAccountIsCorrect();
         protonEmailPage.openMailAndDeleteIt(Methods.driver);
-        protonEmailPage.PermanentlyDeleteIt(Methods.driver);
+        protonEmailPage.permanentlyDeleteIt(Methods.driver);
     }
 }

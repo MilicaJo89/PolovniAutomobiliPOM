@@ -33,11 +33,11 @@ public class PAProtonMailSignInPage extends Methods {
     public void signInToAccount() throws IOException {
         elementsPresent(protonmail);
         clickonElement(protonmail);
-        String ProtonMail = GetFromProperties("protomail");
+        String ProtonMail = getFromProperties("protomail");
         type(protonmail,ProtonMail);
         elementsPresent(protonpass);
         clickonElement(protonpass);
-        String ProtonPass = GetFromProperties("password2");
+        String ProtonPass = getFromProperties("password2");
         type(protonpass,ProtonPass);
         elementsPresent(login);
         clickonElement(login);
