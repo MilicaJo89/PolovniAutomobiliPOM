@@ -23,18 +23,7 @@ public class PAHomePage extends Methods {
         this.driver = driver;
     }
 
-    public void homePageSetUp(){
-        System.setProperty("webdriver.geckodriver", "\"C:\\Users\\milicaj\\Downloads\\geckodriver.exe\"");
-        driver = new FirefoxDriver();
-        driver.get("https://www.polovniautomobili.com");
-        driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, Duration.ofMillis(30000));
-    }
 
-    public void clickPostaviOglasButton(){
-        driver.findElement(oglas).isDisplayed();
-        driver.findElement(oglas).click();
-    }
     public void ClickOnPostaviOglasButton(){
         elementsPresent(oglas);
         clickonElement(oglas);
@@ -47,13 +36,5 @@ public class PAHomePage extends Methods {
     public void validateAccountIsCorrect(){
         elementsPresent(message);
     }
-
-
-
-
-
-
-
-
 
 }

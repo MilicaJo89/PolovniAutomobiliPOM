@@ -37,6 +37,4 @@ public class PABravoPage extends Methods {
         clickonElement(popup2);
     }
 
-
-
 }

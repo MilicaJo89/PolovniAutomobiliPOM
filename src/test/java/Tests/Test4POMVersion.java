@@ -3,16 +3,12 @@ package Tests;
 
 import Pages.*;
 import UtilClass.Methods;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
 
 public class Test4POMVersion extends Methods {
-    
-    
-
 
 
     @Test
@@ -25,6 +21,7 @@ public class Test4POMVersion extends Methods {
         PAProtonMailSignInPage paProtonMailSignInPage= new PAProtonMailSignInPage(Methods.driver);
         PARegistrationPage registrationPage = new PARegistrationPage(Methods.driver);
         PAUserProfilePage userProfilePage = new PAUserProfilePage(Methods.driver);
+
         homePage.Setup();
         homePage.ClickOnPostaviOglasButton();
         loginPage.clickRegistrujSeButton();
@@ -36,6 +33,7 @@ public class Test4POMVersion extends Methods {
         paProtonMailSignInPage.protonMailLoad(Methods.driver);
         Thread.sleep(3000);
         paProtonMailSignInPage.signInToAccount();
+        Thread.sleep(5000);
         paProtonMailSignInPage.clickOnMailElement();
         protonEmailPage.openUnreadEmail();
         Thread.sleep(3000);
@@ -55,5 +53,6 @@ public class Test4POMVersion extends Methods {
         registrationPage.loginAgain();
         homePage.validateAccountIsCorrect();
         protonEmailPage.openMailAndDeleteIt(Methods.driver);
+        protonEmailPage.PermanentlyDeleteIt(Methods.driver);
     }
 }

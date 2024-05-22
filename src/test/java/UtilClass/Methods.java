@@ -20,7 +20,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElemen
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 
 
-public class Methods extends Paths {
+public class Methods{
 
     public static WebDriverWait wait;
 
@@ -68,10 +68,6 @@ public class Methods extends Paths {
         wait.until(visibilityOf(driver.findElement(xpath))).isDisplayed();
     }
 
-    public void scrolldown() {
-        Actions actions = new Actions(driver);
-        actions.sendKeys(Keys.PAGE_DOWN).click().perform();
-    }
 
     public void switchpages() {
         ArrayList<String> tab = new ArrayList<>(driver.getWindowHandles());
@@ -87,10 +83,6 @@ public class Methods extends Paths {
         return driver;
     }
 
-    public void ProtonSetup() {
-        driver.switchTo().newWindow(WindowType.TAB);
-        driver.navigate().to("https://account.proton.me/login");
-    }
 
     public void Protonmail() {
         driver.navigate().to("https://account.proton.me/login");
@@ -121,10 +113,4 @@ public class Methods extends Paths {
         }
     }
 
-    public void ClickOnLink() {
-        driver.switchTo().frame(1);
-        WebElement element = driver.findElement(By.partialLinkText("https://www.polovniautomobili.com/aktivacija-naloga?user=2"));
-        element.click();
-        driver.switchTo().defaultContent();
-    }
 }

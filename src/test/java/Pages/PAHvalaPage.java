@@ -19,5 +19,4 @@ public class PAHvalaPage extends Methods {
         elementsPresent(poruka);
     }
 
-
 }

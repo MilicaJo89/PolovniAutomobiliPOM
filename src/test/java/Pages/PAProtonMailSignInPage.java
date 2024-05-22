@@ -13,7 +13,6 @@ public class PAProtonMailSignInPage extends Methods {
 
 
     //paths
-
     public By protonmail = By.xpath("//input[@id='username']");
     public By protonpass = By.xpath("//input[@id='password']");
     public By mailentrance = By.xpath("//button[@data-testid='explore-mail']");
@@ -49,8 +48,5 @@ public class PAProtonMailSignInPage extends Methods {
         elementsPresent(mailentrance);
         clickonElement(mailentrance);
     }
-
-
-
 
 }

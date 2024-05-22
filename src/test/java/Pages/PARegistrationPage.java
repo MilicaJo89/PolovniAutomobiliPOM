@@ -27,7 +27,7 @@ public class PARegistrationPage extends Methods {
 
 
     public String generatedEmail;
-    
+
 
     public PARegistrationPage(WebDriver driver) {
         this.driver = driver;
@@ -55,16 +55,11 @@ public class PARegistrationPage extends Methods {
         clickonElement(regbutton);
     }
     public void loginAgain() throws IOException {
-        logger.info("Write in the generated email in to the mail text field element");
         type(Username, generatedEmail);
-        logger.info("Click on sledece button element");
         clickonElement(nextstep);
-        logger.info("Write in password in lozinka text field element");
         String ProtonPass=GetFromProperties("password2");
         type(sifra3,ProtonPass);
-        logger.info("Prijavi se button element is present");
         elementsPresent(regbutton);
-        logger.info("Click on Prijavi se button element");
         clickonElement(regbutton);
     }
 

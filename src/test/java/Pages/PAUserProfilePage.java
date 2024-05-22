@@ -9,7 +9,9 @@ import java.io.IOException;
 
 public class PAUserProfilePage extends Methods {
 
+
     WebDriver driver;
+
 
     //paths
     public By name = By.xpath("//input[@name='first_name']");
@@ -25,6 +27,7 @@ public class PAUserProfilePage extends Methods {
     public By postavioglas = By.xpath("//a[@class='top-menu-submit-classified js_ga-event']");
     public By dropdownmenu = By.xpath("//i[@class='position-absolute uk-icon-caret-down']");
     public By logbutton = By.xpath("//li//a[@class='js-logout-link signin_menu_element']");
+
 
     public PAUserProfilePage(WebDriver driver) {
         this.driver = driver;

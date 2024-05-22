@@ -18,7 +18,13 @@ public class PAProtonEmailPage extends Methods {
     public By clickonit = By.xpath("//button[@class='button button-medium button-solid-norm']");
     public By email2 = By.xpath("//span[@title='Aktivirajte Vaš nalog']");
     public By trashcan = By.xpath("//div[@class='flex items-center toolbar-inner flex-nowrap gap-2']//button[@data-testid='toolbar:movetotrash']");
-
+    public By partialLinkText = By.partialLinkText("https://www.polovniautomobili.com/aktivacija-naloga?user=2");
+    public By folderButton= By.xpath("//button[@title='More']");
+    public By trashButton = By.xpath("//a[@data-testid='navigation-link:trash']");
+    public By checkMark = By.xpath("//span[@data-testid='element-list:message-checkbox']");
+    public By permanentDelete = By.xpath("//button[@data-testid='toolbar:deletepermanently']");
+    public By deleteButton = By.xpath("//button[@data-testid='permanent-delete-modal:submit']");
+    public By mailentrance = By.xpath("//button[@data-testid='explore-mail']");
 
     public PAProtonEmailPage(WebDriver driver) {
         this.driver = driver;
@@ -26,9 +32,7 @@ public class PAProtonEmailPage extends Methods {
 
     public void openUnreadEmail() throws InterruptedException {
         Thread.sleep(10000);
-        logger.info("Email title element is present");
         elementsPresent(emailtitle);
-        logger.info("Click on email title element");
         clickonElement(emailtitle);
     }
 
@@ -42,26 +46,36 @@ public class PAProtonEmailPage extends Methods {
 
     public WebDriver openActivationLink(WebDriver driver){
         driver.switchTo().frame(1);
-        WebElement element = driver.findElement(By.partialLinkText("https://www.polovniautomobili.com/aktivacija-naloga?user=2"));
-        element.click();
+        elementsPresent(partialLinkText);
+        clickonElement(partialLinkText);
         driver.switchTo().defaultContent();
         elementsPresent(clickonit);
-        logger.info("Click on pop up element");
         clickonElement(clickonit);
         return driver;
     }
     public void Protonmail() {
         driver.navigate().to("https://account.proton.me/login");
     }
-    public WebDriver openMailAndDeleteIt(WebDriver driver) {
 
+    public WebDriver openMailAndDeleteIt(WebDriver driver) {
         driver.navigate().to("https://account.proton.me/login");
         clickonElement(mailentrance);
-        //delete email//
-        logger.info("Click on email element");
         clickonElement(email2);
-        logger.info("Click on trash can element in the email element");
         clickonElement(trashcan);
+        return driver;
+    }
+
+    public WebDriver PermanentlyDeleteIt(WebDriver driver){
+        elementsPresent(folderButton);
+        clickonElement(folderButton);
+        elementsPresent(trashButton);
+        clickonElement(trashButton);
+        elementsPresent(checkMark);
+        clickonElement(checkMark);
+        elementsPresent(permanentDelete);
+        clickonElement(permanentDelete);
+        elementsPresent(deleteButton);
+        clickonElement(deleteButton);
         return driver;
     }
 }

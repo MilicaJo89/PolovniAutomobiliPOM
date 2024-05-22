@@ -9,15 +9,10 @@ import java.io.IOException;
 
 public class PALoginPage extends Methods {
 
-
     WebDriver driver;
-
 
     //paths
     public By registracija = By.xpath("//a[@class='uk-width-1-1 uk-button button-register uk-button-large button-box-shadow-remove uk-text-large']");
-    public By nextstep = By.id("next-step");
-    public By Username = By.xpath("//input[@id='username_header']");
-    public By regbutton = By.xpath("//button[@name='login']");
 
 
     public PALoginPage(WebDriver driver) {
@@ -28,10 +23,5 @@ public class PALoginPage extends Methods {
        elementsPresent(registracija);
        clickonElement(registracija);
     }
-
-
-
-
-
 
 }
