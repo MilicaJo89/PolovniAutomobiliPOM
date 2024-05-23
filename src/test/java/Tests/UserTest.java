@@ -8,8 +8,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 
-public class PomVersion extends Methods {
-
+public class UserTest extends Methods {
 
     @Test
     public void VersionOfTest04() throws IOException, InterruptedException {
