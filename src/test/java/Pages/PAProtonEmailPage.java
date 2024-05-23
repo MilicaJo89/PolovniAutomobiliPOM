@@ -75,27 +75,4 @@ public class PAProtonEmailPage extends Methods {
         return driver;
     }
 
-    public WebDriver permanentlyDeleteIt(WebDriver driver){
-        logger.info("folder button is present");
-        elementsPresent(folderButton);
-        logger.info("click on the folder button");
-        clickonElement(folderButton);
-        logger.info("trash button is present");
-        elementsPresent(trashButton);
-        logger.info("click on trash button");
-        clickonElement(trashButton);
-        logger.info("check cox in front of email is present");
-        elementsPresent(checkMark);
-        logger.info("click on check box in front of email");
-        clickonElement(checkMark);
-        logger.info("permanent delete button is present");
-        elementsPresent(permanentDelete);
-        logger.info("click on permanent button");
-        clickonElement(permanentDelete);
-        logger.info("delete button is present");
-        elementsPresent(deleteButton);
-        logger.info("click on delete button");
-        clickonElement(deleteButton);
-        return driver;
-    }
 }

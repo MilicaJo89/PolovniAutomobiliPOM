@@ -54,6 +54,5 @@ public class PomVersion extends Methods {
         registrationPage.loginAgain();
         homePage.validateAccountIsCorrect();
         protonEmailPage.openMailAndDeleteIt(Methods.driver);
-        protonEmailPage.permanentlyDeleteIt(Methods.driver);
     }
 }

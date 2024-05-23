@@ -32,7 +32,7 @@ public class Methods{
 
     public static final Logger logger = Logger.getLogger("MyLogger");
 
-    String generatedEmail= generateemail();
+
 
 
     public static String generateemail() {
