@@ -34,7 +34,7 @@ public class PAProtonMailSignInPage extends Methods {
 
     public void signInToAccount() throws IOException {
         logger.info("Email text box is present");
-        elementsPresent(protonmail);
+        elementIsPresent(protonmail);
         logger.info("click on email text box element");
         clickonElement(protonmail);
         logger.info("from properties file get proton mail value");
@@ -42,7 +42,7 @@ public class PAProtonMailSignInPage extends Methods {
         logger.info("in the email text box write the email value");
         type(protonmail,ProtonMail);
         logger.info("Password text box is present");
-        elementsPresent(protonpass);
+        elementIsPresent(protonpass);
         logger.info("click on password text box");
         clickonElement(protonpass);
         logger.info("from properties file get proton password value");
@@ -50,7 +50,7 @@ public class PAProtonMailSignInPage extends Methods {
         logger.info("in the password text box write the password value");
         type(protonpass,ProtonPass);
         logger.info("login button is present");
-        elementsPresent(login);
+        elementIsPresent(login);
         logger.info("click login button");
         clickonElement(login);
     }
@@ -58,7 +58,7 @@ public class PAProtonMailSignInPage extends Methods {
     public void clickOnMailElement() throws InterruptedException {
         Thread.sleep(8000);
         logger.info("mail element is present");
-        elementsPresent(mailentrance);
+        elementIsPresent(mailentrance);
         logger.info("click on mail element");
         clickonElement(mailentrance);
     }

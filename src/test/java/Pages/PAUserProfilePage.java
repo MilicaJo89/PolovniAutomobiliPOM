@@ -35,7 +35,7 @@ public class PAUserProfilePage extends Methods {
 
     public void enterUserInformation() throws IOException {
         logger.info("text box name is present");
-        elementsPresent(name);
+        elementIsPresent(name);
         logger.info("from properties file take value of first name");
         String Name = getFromProperties("firsname");
         logger.info("in name text box write in the first name value");
@@ -78,7 +78,7 @@ public class PAUserProfilePage extends Methods {
         scrollIntoView(postavioglas);
         Thread.sleep(3000);
         logger.info("verify success message");
-        elementsPresent(succesmesage);
+        elementIsPresent(succesmesage);
     }
 
     public void logOutButton(){

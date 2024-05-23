@@ -48,22 +48,22 @@ public class PARegistrationPage extends Methods {
 
     public void checkCheckBoxes(){
         logger.info("prihvatam check box is present");
-        elementsPresent(prihvatamcheckbox);
+        elementIsPresent(prihvatamcheckbox);
         logger.info("check the prihvatam check box");
         clickonElement(prihvatamcheckbox);
         logger.info("prodaja check box is present");
-        elementsPresent(prodajacheckbox);
+        elementIsPresent(prodajacheckbox);
         logger.info("check the prodaja check box");
         clickonElement(prodajacheckbox);
         logger.info("kupovina check box is present");
-        elementsPresent(kupovinacheckbox);
+        elementIsPresent(kupovinacheckbox);
         logger.info("check the kupovina check box");
         clickonElement(kupovinacheckbox);
     }
 
     public void clickRegistracijaButton(){
         logger.info("registracija button is present");
-        elementsPresent(regbutton);
+        elementIsPresent(regbutton);
         logger.info("click on registacija button");
         clickonElement(regbutton);
     }
@@ -77,7 +77,7 @@ public class PARegistrationPage extends Methods {
         logger.info("in the password text box write the password value");
         type(sifra3,ProtonPass);
         logger.info("login button element is present");
-        elementsPresent(regbutton);
+        elementIsPresent(regbutton);
         logger.info("click on login button");
         clickonElement(regbutton);
     }

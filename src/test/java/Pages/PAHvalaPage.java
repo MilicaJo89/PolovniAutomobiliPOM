@@ -17,7 +17,7 @@ public class PAHvalaPage extends Methods {
     public void verifyHvalaMessage() throws InterruptedException {
         Thread.sleep(3000);
         logger.info("hvala na registraciji message is present");
-        elementsPresent(poruka);
+        elementIsPresent(poruka);
     }
 
 }

@@ -64,7 +64,7 @@ public class Methods{
         }
     }
 
-    public void elementsPresent(By xpath) {
+    public void elementIsPresent(By xpath) {
         wait.until(visibilityOf(driver.findElement(xpath))).isDisplayed();
     }
 

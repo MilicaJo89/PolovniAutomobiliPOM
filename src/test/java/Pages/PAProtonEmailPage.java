@@ -32,7 +32,7 @@ public class PAProtonEmailPage extends Methods {
     public void openUnreadEmail() throws InterruptedException {
         Thread.sleep(10000);
         logger.info("email is present");
-        elementsPresent(emailtitle);
+        elementIsPresent(emailtitle);
         logger.info("click on email");
         clickonElement(emailtitle);
     }
@@ -49,12 +49,12 @@ public class PAProtonEmailPage extends Methods {
     public WebDriver openActivationLink(WebDriver driver){
         driver.switchTo().frame(1);
         logger.info("activation link is present");
-        elementsPresent(partialLinkText);
+        elementIsPresent(partialLinkText);
         logger.info("click on activation link");
         clickonElement(partialLinkText);
         driver.switchTo().defaultContent();
         logger.info("pop up is present");
-        elementsPresent(clickonit);
+        elementIsPresent(clickonit);
         logger.info("click on pop up");
         clickonElement(clickonit);
         return driver;

@@ -5,8 +5,6 @@ import UtilClass.Methods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import java.io.IOException;
-
 public class PALoginPage extends Methods {
 
     WebDriver driver;
@@ -21,7 +19,7 @@ public class PALoginPage extends Methods {
 
     public void clickRegistrujSeButton() {
         logger.info("registracija button is present");
-        elementsPresent(registracija);
+        elementIsPresent(registracija);
         logger.info("click on the registracija button");
         clickonElement(registracija);
     }
