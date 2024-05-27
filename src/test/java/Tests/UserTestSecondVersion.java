@@ -26,20 +26,20 @@ public class UserTestSecondVersion extends Methods {
         paRegistrationPageClass.checkCheckBoxes();
         paRegistrationPageClass.clickRegistracijaButton();
         paHvalaPageClass.verifyHvalaMessage();
-        Thread.sleep(5000);
+        Thread.sleep(8000);
         paProtonMailSigninPageClass.protonMailLoad(Methods.driver);
-        Thread.sleep(5000);
+        Thread.sleep(8000);
         paProtonMailSigninPageClass.signInToAccount();
-        Thread.sleep(5000);
+        Thread.sleep(8000);
         paProtonMailSigninPageClass.clickOnMailElement();
         paProtonEmailPageClass.openUnreadEmail();
-        Thread.sleep(5000);
+        Thread.sleep(8000);
         paProtonEmailPageClass.scrollDown(Methods.driver);
-        Thread.sleep(5000);
+        Thread.sleep(8000);
         paProtonEmailPageClass.openActivationLink(Methods.driver);
-        Thread.sleep(5000);
+        Thread.sleep(8000);
         paBravoPageClass.checkCheckBoxes();
-        Thread.sleep(5000);
+        Thread.sleep(8000);
         paBravoPageClass.clickPotvrdiButton();
         paUserProfilePageClass.enterUserInformation();
         paUserProfilePageClass.saveButton();
@@ -50,5 +50,4 @@ public class UserTestSecondVersion extends Methods {
         paHomePageClass.validateAccountIsCorrect();
         paProtonEmailPageClass.openMailAndDeleteIt(Methods.driver);
     }
-
 }
