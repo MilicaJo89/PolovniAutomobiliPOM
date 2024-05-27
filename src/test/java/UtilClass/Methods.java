@@ -34,7 +34,6 @@ public class Methods{
 
 
 
-
     public static String generateemail() {
         int min = 1;
         int max = 1000000;
@@ -84,11 +83,6 @@ public class Methods{
     }
 
 
-    public void protonmail() {
-        driver.navigate().to("https://account.proton.me/login");
-    }
-
-
     public void scrollIntoView(By xpath) {
         WebElement element = driver.findElement(xpath);
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -112,5 +106,4 @@ public class Methods{
             FileUtils.copyFile(screenshotfile, new File("C:\\Users\\milicaj\\Pictures\\Screenshots\\Failtest.png"));
         }
     }
-
 }

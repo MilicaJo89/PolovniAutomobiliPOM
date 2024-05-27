@@ -4,8 +4,8 @@ import UtilClass.Methods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+public class PAHomePageClass extends Methods {
 
-public class PAHomePage extends Methods {
 
     WebDriver driver;
 
@@ -15,26 +15,30 @@ public class PAHomePage extends Methods {
     public By message = By.xpath("//span[@class='ym-hide-content']");
 
 
-    public PAHomePage(WebDriver driver) {
+    public PAHomePageClass PAHomePage(WebDriver driver) {
         this.driver = driver;
+        return this;
     }
 
 
-    public void clickOnPostaviOglasButton(){
+    public PALoginPageClass clickOnPostaviOglasButton(){
         logger.info("postavi oglas button is present");
         elementIsPresent(oglas);
         logger.info("click on postavi oglas button");
         clickonElement(oglas);
+        return new PALoginPageClass().PALoginPage(driver);
     }
 
-    public void clickOnLoginButton(){
+    public PARegistrationPageClass clickOnLoginButton(){
         logger.info("click on login button");
         clickonElement(loginagain);
+        return new PARegistrationPageClass().PARegistrationPage(driver);
     }
 
-    public void validateAccountIsCorrect(){
+    public PAHomePageClass validateAccountIsCorrect(){
         logger.info("validate that the account is correct");
         elementIsPresent(message);
+        return PAHomePage(driver);
     }
 
 }

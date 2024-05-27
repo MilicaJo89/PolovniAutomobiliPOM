@@ -4,23 +4,23 @@ import UtilClass.Methods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-
-public class PABravoPage extends Methods {
-
-    //paths
+public class PaBravoPageClass extends Methods {
     public By interestedinbuying =  By.xpath("//label//input[@id='interestedInBuying']");
     public By interestedinselling = By.xpath("//label//input[@id='interestedInSelling']");
     public By interestedinreviweing = By.xpath("//label//input[@id='interestedInReviewingOffer']");
     public By potvrdi = By.xpath("//button[@name='submit_registration_survey']");
     public By popup2 = By.xpath("//button[contains(text(),'U redu')]");
 
+
     WebDriver driver;
 
-    public PABravoPage(WebDriver driver) {
+
+    public PaBravoPageClass BravoPage(WebDriver driver) {
         this.driver = driver;
+        return this;
     }
 
-    public void checkCheckBoxes(){
+    public PaBravoPageClass checkCheckBoxes(){
         logger.info("driver switch to this page");
         switchpages();
         logger.info("zainteresovan za kupovinu check box is present");
@@ -35,9 +35,10 @@ public class PABravoPage extends Methods {
         elementIsPresent(interestedinreviweing);
         logger.info("check zainteresovan za recenziju check box");
         clickonElement(interestedinreviweing);
+        return BravoPage(driver);
     }
 
-    public void clickPotvrdiButton(){
+    public PAUserProfilePageClass clickPotvrdiButton(){
         logger.info("potvrdi button is present");
         elementIsPresent(potvrdi);
         logger.info("click potvrdi button");
@@ -46,8 +47,7 @@ public class PABravoPage extends Methods {
         elementIsPresent(popup2);
         logger.info("click on pop up");
         clickonElement(popup2);
+        return new PAUserProfilePageClass();
     }
-
-
 
 }

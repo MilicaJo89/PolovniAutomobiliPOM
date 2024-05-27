@@ -6,8 +6,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 
-
-public class PAProtonEmailPage extends Methods {
+public class PAProtonEmailPageClass extends Methods {
 
     WebDriver driver;
 
@@ -25,16 +24,18 @@ public class PAProtonEmailPage extends Methods {
     public By deleteButton = By.xpath("//button[@data-testid='permanent-delete-modal:submit']");
     public By mailentrance = By.xpath("//button[@data-testid='explore-mail']");
 
-    public PAProtonEmailPage(WebDriver driver) {
+    public PAProtonEmailPageClass PAProtonEmailPage(WebDriver driver) {
         this.driver = driver;
+        return this;
     }
 
-    public void openUnreadEmail() throws InterruptedException {
+    public PAProtonEmailPageClass openUnreadEmail() throws InterruptedException {
         Thread.sleep(10000);
         logger.info("email is present");
         elementIsPresent(emailtitle);
         logger.info("click on email");
         clickonElement(emailtitle);
+        return PAProtonEmailPage(driver);
     }
 
 
@@ -44,6 +45,7 @@ public class PAProtonEmailPage extends Methods {
         actions.sendKeys(Keys.PAGE_DOWN).click().perform();
         return driver;
     }
+
 
     public WebDriver openActivationLink(WebDriver driver){
         driver.switchTo().frame(1);
@@ -69,5 +71,4 @@ public class PAProtonEmailPage extends Methods {
         clickonElement(trashcan);
         return driver;
     }
-
 }
