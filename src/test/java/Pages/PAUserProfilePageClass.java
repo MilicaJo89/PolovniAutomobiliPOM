@@ -3,7 +3,6 @@ package Pages;
 import UtilClass.Methods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.devtools.v85.memory.Memory;
 
 import java.io.IOException;
 
@@ -62,9 +61,9 @@ public class PAUserProfilePageClass extends Methods {
         logger.info("in the cellphone text box write cellphone value");
         type(Cellphone, Cellphone1);
         logger.info("click on okrug element");
-        clickonElement(okrug);
+        clickOnElement(okrug);
         logger.info("click on sumadijski element");
-        clickonElement(Sumadijski);
+        clickOnElement(Sumadijski);
         return PAUserProfilePageClass(driver);
     }
 
@@ -72,7 +71,7 @@ public class PAUserProfilePageClass extends Methods {
         logger.info("scroll down to the save button");
         scrollIntoView(savebutton);
         logger.info("click on the save button");
-        clickonElement(savebutton);
+        clickOnElement(savebutton);
         return PAUserProfilePageClass(driver);
     }
 
@@ -89,7 +88,7 @@ public class PAUserProfilePageClass extends Methods {
         logger.info("hover over dropdown menu to open it");
         hover(dropdownmenu);
         logger.info("Click on log out button");
-        clickonElement(logbutton);
+        clickOnElement(logbutton);
         return new PAHomePageClass().PAHomePage(driver);
     }
 }

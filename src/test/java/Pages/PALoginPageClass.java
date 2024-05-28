@@ -20,7 +20,7 @@ public class PALoginPageClass extends Methods {
         logger.info("registracija button is present");
         elementIsPresent(registracija);
         logger.info("click on the registracija button");
-        clickonElement(registracija);
+        clickOnElement(registracija);
         return new PARegistrationPageClass().PARegistrationPage(driver);
     }
 }

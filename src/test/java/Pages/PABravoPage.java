@@ -22,30 +22,30 @@ public class PABravoPage extends Methods {
 
     public void checkCheckBoxes(){
         logger.info("driver switch to this page");
-        switchpages();
+        switchPages();
         logger.info("zainteresovan za kupovinu check box is present");
         elementIsPresent(interestedinbuying);
         logger.info("check zainteresovan za kupovinu check box");
-        clickonElement(interestedinbuying);
+        clickOnElement(interestedinbuying);
         logger.info("zainteresovan za prodaju check box is present");
         elementIsPresent(interestedinselling);
         logger.info("check zainteresovan za prodaju check box");
-        clickonElement(interestedinselling);
+        clickOnElement(interestedinselling);
         logger.info("zainteresovan za recanziju check box is present");
         elementIsPresent(interestedinreviweing);
         logger.info("check zainteresovan za recenziju check box");
-        clickonElement(interestedinreviweing);
+        clickOnElement(interestedinreviweing);
     }
 
     public void clickPotvrdiButton(){
         logger.info("potvrdi button is present");
         elementIsPresent(potvrdi);
         logger.info("click potvrdi button");
-        clickonElement(potvrdi);
+        clickOnElement(potvrdi);
         logger.info("pop up is present");
         elementIsPresent(popup2);
         logger.info("click on pop up");
-        clickonElement(popup2);
+        clickOnElement(popup2);
     }
 
 

@@ -25,13 +25,13 @@ public class PAHomePageClass extends Methods {
         logger.info("postavi oglas button is present");
         elementIsPresent(oglas);
         logger.info("click on postavi oglas button");
-        clickonElement(oglas);
+        clickOnElement(oglas);
         return new PALoginPageClass().PALoginPage(driver);
     }
 
     public PARegistrationPageClass clickOnLoginButton(){
         logger.info("click on login button");
-        clickonElement(loginagain);
+        clickOnElement(loginagain);
         return new PARegistrationPageClass().PARegistrationPage(driver);
     }
 

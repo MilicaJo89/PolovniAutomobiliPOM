@@ -36,7 +36,7 @@ public class PAProtonMailSignInPage extends Methods {
         logger.info("Email text box is present");
         elementIsPresent(protonmail);
         logger.info("click on email text box element");
-        clickonElement(protonmail);
+        clickOnElement(protonmail);
         logger.info("from properties file get proton mail value");
         String ProtonMail = getFromProperties("protomail");
         logger.info("in the email text box write the email value");
@@ -44,7 +44,7 @@ public class PAProtonMailSignInPage extends Methods {
         logger.info("Password text box is present");
         elementIsPresent(protonpass);
         logger.info("click on password text box");
-        clickonElement(protonpass);
+        clickOnElement(protonpass);
         logger.info("from properties file get proton password value");
         String ProtonPass = getFromProperties("password2");
         logger.info("in the password text box write the password value");
@@ -52,7 +52,7 @@ public class PAProtonMailSignInPage extends Methods {
         logger.info("login button is present");
         elementIsPresent(login);
         logger.info("click login button");
-        clickonElement(login);
+        clickOnElement(login);
     }
 
     public void clickOnMailElement() throws InterruptedException {
@@ -60,7 +60,7 @@ public class PAProtonMailSignInPage extends Methods {
         logger.info("mail element is present");
         elementIsPresent(mailentrance);
         logger.info("click on mail element");
-        clickonElement(mailentrance);
+        clickOnElement(mailentrance);
     }
 
 }

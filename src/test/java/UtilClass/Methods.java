@@ -34,7 +34,7 @@ public class Methods{
 
 
 
-    public static String generateemail() {
+    public static String generateEmail() {
         int min = 1;
         int max = 1000000;
         int b = (int) (Math.random() * (max - min + 1) + min);
@@ -55,7 +55,7 @@ public class Methods{
         password.sendKeys(text);
     }
 
-    public void clickonElement(By xpath) {
+    public void clickOnElement(By xpath) {
         try {
             wait.until(visibilityOf(driver.findElement(xpath))).click();
         } catch (Exception e) {
@@ -68,7 +68,7 @@ public class Methods{
     }
 
 
-    public void switchpages() {
+    public void switchPages() {
         ArrayList<String> tab = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tab.get(2));
     }

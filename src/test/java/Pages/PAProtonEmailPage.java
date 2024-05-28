@@ -34,7 +34,7 @@ public class PAProtonEmailPage extends Methods {
         logger.info("email is present");
         elementIsPresent(emailtitle);
         logger.info("click on email");
-        clickonElement(emailtitle);
+        clickOnElement(emailtitle);
     }
 
 
@@ -50,23 +50,23 @@ public class PAProtonEmailPage extends Methods {
         logger.info("activation link is present");
         elementIsPresent(partialLinkText);
         logger.info("click on activation link");
-        clickonElement(partialLinkText);
+        clickOnElement(partialLinkText);
         driver.switchTo().defaultContent();
         logger.info("pop up is present");
         elementIsPresent(clickonit);
         logger.info("click on pop up");
-        clickonElement(clickonit);
+        clickOnElement(clickonit);
         return driver;
     }
 
     public WebDriver openMailAndDeleteIt(WebDriver driver) {
         driver.navigate().to("https://account.proton.me/login");
         logger.info("click on mail element");
-        clickonElement(mailentrance);
+        clickOnElement(mailentrance);
         logger.info("click on email");
-        clickonElement(email2);
+        clickOnElement(email2);
         logger.info("click on trash can element");
-        clickonElement(trashcan);
+        clickOnElement(trashcan);
         return driver;
     }
 

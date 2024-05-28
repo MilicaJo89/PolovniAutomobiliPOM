@@ -24,12 +24,12 @@ public class PAHomePage extends Methods {
         logger.info("postavi oglas button is present");
         elementIsPresent(oglas);
         logger.info("click on postavi oglas button");
-        clickonElement(oglas);
+        clickOnElement(oglas);
     }
 
     public void clickOnLoginButton(){
         logger.info("click on login button");
-        clickonElement(loginagain);
+        clickOnElement(loginagain);
     }
 
     public void validateAccountIsCorrect(){

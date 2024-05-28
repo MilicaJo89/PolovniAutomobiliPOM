@@ -35,7 +35,7 @@ public class PARegistrationPageClass extends Methods {
 
     public PARegistrationPageClass register() throws IOException {
         logger.info("email is generated");
-        generatedEmail = generateemail();
+        generatedEmail = generateEmail();
         logger.info("in the email text box write the generated email value");
         type(mail,generatedEmail);
         logger.info("from the properties file get password value");
@@ -51,15 +51,15 @@ public class PARegistrationPageClass extends Methods {
         logger.info("prihvatam check box is present");
         elementIsPresent(prihvatamcheckbox);
         logger.info("check the prihvatam check box");
-        clickonElement(prihvatamcheckbox);
+        clickOnElement(prihvatamcheckbox);
         logger.info("prodaja check box is present");
         elementIsPresent(prodajacheckbox);
         logger.info("check the prodaja check box");
-        clickonElement(prodajacheckbox);
+        clickOnElement(prodajacheckbox);
         logger.info("kupovina check box is present");
         elementIsPresent(kupovinacheckbox);
         logger.info("check the kupovina check box");
-        clickonElement(kupovinacheckbox);
+        clickOnElement(kupovinacheckbox);
         return PARegistrationPage(driver);
     }
 
@@ -67,14 +67,14 @@ public class PARegistrationPageClass extends Methods {
         logger.info("registracija button is present");
         elementIsPresent(regbutton);
         logger.info("click on registacija button");
-        clickonElement(regbutton);
+        clickOnElement(regbutton);
         return new PaHvalaPageClass().HvalaPage(driver);
     }
     public PAHomePageClass loginAgain() throws IOException {
         logger.info("in the username text box write the generated email value ");
         type(Username, generatedEmail);
         logger.info("click on the next step element");
-        clickonElement(nextstep);
+        clickOnElement(nextstep);
         logger.info("from properties file get the value of proton pasword");
         String ProtonPass= getFromProperties("password2");
         logger.info("in the password text box write the password value");
@@ -82,7 +82,7 @@ public class PARegistrationPageClass extends Methods {
         logger.info("login button element is present");
         elementIsPresent(regbutton);
         logger.info("click on login button");
-        clickonElement(regbutton);
+        clickOnElement(regbutton);
         return new PAHomePageClass().PAHomePage(driver);
     }
 }

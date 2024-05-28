@@ -61,16 +61,16 @@ public class PAUserProfilePage extends Methods {
         logger.info("in the cellphone text box write cellphone value");
         type(Cellphone, Cellphone1);
         logger.info("click on okrug element");
-        clickonElement(okrug);
+        clickOnElement(okrug);
         logger.info("click on sumadijski element");
-        clickonElement(Sumadijski);
+        clickOnElement(Sumadijski);
     }
 
     public void saveButton(){
         logger.info("scroll down to the save button");
         scrollIntoView(savebutton);
         logger.info("click on the save button");
-        clickonElement(savebutton);
+        clickOnElement(savebutton);
     }
 
     public void verifySuccessMessage() throws InterruptedException {
@@ -85,7 +85,7 @@ public class PAUserProfilePage extends Methods {
         logger.info("hover over dropdown menu to open it");
         hover(dropdownmenu);
         logger.info("Click on log out button");
-        clickonElement(logbutton);
+        clickOnElement(logbutton);
     }
 
 }
